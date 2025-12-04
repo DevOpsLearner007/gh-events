@@ -13,8 +13,8 @@ on:
       - main                        # Trigger only on PRs to main branch
       - 'dev-*'                     # Trigger on PRs to branches starting with 'dev-'
       - 'prod/**'                   # Trigger on PRs to branches under the 'prod' directory
-    paths-ignore:
-      - '.github/workflows/*'       # Trigger only if files in the '.github/workflows' directory are changed
+    paths:
+      - '.github/workflows/*'       # Trigger only if workflow files are changed
     jobs:
   deploy:
     runs-on: ubuntu-latest
